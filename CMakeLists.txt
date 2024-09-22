@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.8)
+project(TDS)
+
+add_executable(td01_ex01 src/td01_ex01.cpp)
+add_executable(td01_ex02 src/td01_ex02.cpp)
+
+add_executable(td02_ex01 src/td02_ex01.cpp)
+add_executable(td02_ex02 src/td02_ex02.cpp)
+add_executable(td02_ex03 src/td02_ex03.cpp)
+add_executable(td02_ex04 src/td02_ex04.cpp)
+add_executable(td02_ex05 src/td02_ex05.cpp)
+add_executable(td02_ex06 src/td02_ex06.cpp)
+add_executable(td02_ex07 src/td02_ex07.cpp)
+
+add_executable(td03_ex01 src/td03_ex01.cpp)
+add_executable(td03_ex02 src/td03_ex02.cpp)
+add_executable(td03_ex03 src/td03_ex03.cpp)
+
+target_compile_features(td01_ex01 PRIVATE cxx_std_17)
+target_compile_features(td01_ex02 PRIVATE cxx_std_17)
+
+target_compile_features(td02_ex01 PRIVATE cxx_std_17)
+target_compile_features(td02_ex02 PRIVATE cxx_std_17)
+target_compile_features(td02_ex03 PRIVATE cxx_std_17)
+target_compile_features(td02_ex04 PRIVATE cxx_std_17)
+target_compile_features(td02_ex05 PRIVATE cxx_std_17)
+target_compile_features(td02_ex06 PRIVATE cxx_std_17)
+target_compile_features(td02_ex07 PRIVATE cxx_std_17)
+
+target_compile_features(td03_ex01 PRIVATE cxx_std_17)
+target_compile_features(td03_ex02 PRIVATE cxx_std_17)
+target_compile_features(td03_ex03 PRIVATE cxx_std_17)
