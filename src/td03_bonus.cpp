@@ -27,6 +27,7 @@ int main()
     Article article;
     float price;
     float price_reduction;
+    float promotion;
     int age;
     bool fidelityCard;
 
@@ -101,7 +102,15 @@ int main()
     {
         price_reduction = price_reduction * 0.9f;
     }
+
+    promotion = price_reduction * 0.10f;
+    if (promotion > 30)
+    {
+        promotion = 30;
+    }
+    
     
     std::cout << "Votre article coutant " << price << " est maintenant a " << price_reduction << std::endl;
+    std::cout << "Vous avez un bon d'achat de " << promotion << std::endl;
     return 0;
 }
