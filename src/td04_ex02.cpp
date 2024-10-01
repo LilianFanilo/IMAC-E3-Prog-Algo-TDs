@@ -1,37 +1,33 @@
 #include <iostream>
-#include <vector>
 
-int main ()
+int main()
 {
-    int level_stage {};
-    int ennemies {};
-    int level_ennemies {};
-    std::vector<int> vector {};
+    std::string word {};
+    std::string reverse_word {};
+    int i {1};
+    int word_size {};
 
-    int total_energy {};
+    std::cout << "Entrez un mot :" << std::endl;
+    std::cin >> word;
 
-    std::cout << "Saisissez le niveau terminé :" << std::endl;
-    std::cin >> level_stage ;
+    word_size = word.size();
 
-    std::cout << "Saisissez le nombre d'ennemis vaincus :" << std::endl;
-    std::cin >> ennemies ;
-
-    std::cout << "Saisissez le niveau des ennemis vaincus :" << std::endl;
-
-    for (int i = 0; i < level_stage; i++)
+    for ( char letter : word )
     {
-        if (i % level_ennemies == 0)
-        {
-            vector.push_back(i);
-        }
-    }
-
-    for (int const value : vector)
-    {
-        total_energy += value;
+            int letter_lenght = word_size - i;
+            reverse_word += word[letter_lenght];
+            i++;
     }
     
-    std::cout << "Exp obtenu :" << total_energy << std::endl;
+    if (word == reverse_word)
+    {
+        std::cout << word << " est un palindrome !" << std::endl;
+    } 
+    else
+    {
+        std::cout << word << " n'est pas un palindrome !" << std::endl;
+
+    } 
     
 
 }

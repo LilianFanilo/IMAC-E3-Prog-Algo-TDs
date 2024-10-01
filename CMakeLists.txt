@@ -23,6 +23,8 @@ add_executable(td03_bonus src/td03_bonus.cpp)
 
 add_executable(td04_ex01 src/td04_ex01.cpp)
 add_executable(td04_ex02 src/td04_ex02.cpp)
+add_executable(td04_ex03 src/td04_ex03.cpp)
+add_executable(td04_ex04 src/td04_ex04.cpp)
 
 target_compile_features(td01_ex01 PRIVATE cxx_std_17)
 target_compile_features(td01_ex02 PRIVATE cxx_std_17)
@@ -46,3 +48,5 @@ target_compile_features(td03_bonus PRIVATE cxx_std_17)
 
 target_compile_features(td04_ex01 PRIVATE cxx_std_17)
 target_compile_features(td04_ex02 PRIVATE cxx_std_17)
+target_compile_features(td04_ex03 PRIVATE cxx_std_17)
+target_compile_features(td04_ex04 PRIVATE cxx_std_17)
