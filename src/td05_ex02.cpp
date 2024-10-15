@@ -1,51 +1,40 @@
 #include <iostream>
 
-/*
-    Fonction récursive
-*/
-
-int fact(int n)
-{    
-	if( n <= 1 )    
-	{        
-		return 1;    
-	}    
-	
-	return fact(n-1) * n;
+int factorial(int const n) {
+    if (n <= 0) {
+        return 1;
+    }
+    return n * factorial(n-1);
 }
 
-/*
-    Fonction itérative
-*/
-
-int fact_for(int const n){
-    int fact = 1;
-
-    // loop calculating factorial
-    for (int i = 1; i <= n; i++) {
-        fact = fact * i;
+int factorial_iterative(int const n) {
+    int result {1};
+    // Je peux commencer à 2 directement car 1! = 1
+    for (int i {2}; i <= n; i++) {
+        result *= i;
     }
-
-    return fact;
+    return result;
 }
 
 int main()
 {
-    int number {};
-    std::cout << "Entrer un nombre positif inferieur ou egale a 12 :" << std::endl;
-    std::cin >> number;
+    int n {};
+    std::cout << "Enter a positive integer: ";
+    std::cin >> n;
 
-    if (number > 12 || number < 0)
-    {
-        std::cout << "Erreur: nombre negatif ou superieur a 12" << std::endl;
-    } 
-    else 
-    {
-        std::cout << "Fonction recursive: " << fact(number) << std::endl;
-        std::cout << "Fonction iterative: " << fact_for(number) << std::endl;
+    if (n < 0) {
+        std::cout << "Error: the number must be positive." << std::endl;
+        return 1;
     }
+
+    if (n > 12) {
+        std::cout << "Error: the number is too big." << std::endl;
+        return 1;
+    }
+
+    std::cout << "Factorial of " << n << " (recursive): " << factorial(n) << std::endl;
+    std::cout << "Factorial of " << n << " (iterative): " << factorial_iterative(n) << std::endl;
+
     
-
-
-
+    return 0;
 }
